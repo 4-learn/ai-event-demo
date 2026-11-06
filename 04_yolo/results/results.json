@@ -1,0 +1,54 @@
+{
+  "model": "yolo11n.pt",
+  "ultralytics": "8.4.203",
+  "torch": "2.15.0+cpu",
+  "confidence_threshold": 0.25,
+  "imgsz": 640,
+  "images": [
+    {
+      "file": "aisle-empty.png",
+      "chair_detected": false,
+      "detections": [
+        {
+          "class_id": 72,
+          "label": "refrigerator",
+          "confidence": 0.6212,
+          "xyxy": [
+            774.6,
+            89.5,
+            865.5,
+            262.1
+          ]
+        }
+      ]
+    },
+    {
+      "file": "aisle-chair.png",
+      "chair_detected": true,
+      "detections": [
+        {
+          "class_id": 56,
+          "label": "chair",
+          "confidence": 0.9351,
+          "xyxy": [
+            672.5,
+            303.0,
+            1020.4,
+            843.2
+          ]
+        },
+        {
+          "class_id": 72,
+          "label": "refrigerator",
+          "confidence": 0.6229,
+          "xyxy": [
+            773.2,
+            88.9,
+            865.5,
+            262.2
+          ]
+        }
+      ]
+    }
+  ]
+}
