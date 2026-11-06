@@ -1,33 +1,19 @@
 # AI 事件管理系統
 
-這是一個給 Python 初學者的課程示範。
+給 Python 初學者的課程示範：從通道占用的故事，逐步串起事件判斷、影像辨識、LINE 通知與 AI 報告。
 
-我們用「通道被物品擋住」的故事，看看 Python 如何串起攝影機、事件判斷、LINE 通知與 AI 報告。
+## 章節分支
 
-## 你會看到什麼？
+每一章從上一章接續，只增加少量功能。請切換到對應分支查看程式。
 
-1. 用有限狀態機，判斷事件何時開始與結束。
-2. 用 YOLO 辨識物件，持續占用才發出 LINE 通知。
-3. 用爬蟲蒐集規範，透過 RAG 查詢並附上來源。
-4. 讓 Agent 查詢歷史紀錄、計算統計，整理七天報告。
-
-## 從哪裡開始？
-
-先看懂有限狀態機，再逐步加入其他功能。
-第一階段不需要 ESP32-CAM，也不需要先理解所有 AI 技術。
-
-## 範例程式
-
-- [03 有限狀態機](03_fsm/)：用鍵盤輸入，理解狀態、計數與告警門檻。
-
-## 建立環境（選用）
-
-03 不需要第三方套件，也可以直接執行。若要為後續章節準備獨立環境：
+| 分支 | 內容 |
+| --- | --- |
+| [03_fsm](https://github.com/4-learn/ai-event-demo/tree/03_fsm) | 用鍵盤輸入，理解有限狀態機、計數與告警門檻。 |
 
 ```bash
-python3 -m venv .env
-source .env/bin/activate
-python -m pip install -r requirements.txt
+git clone https://github.com/4-learn/ai-event-demo.git
+cd ai-event-demo
+git switch 03_fsm
 ```
 
-`.env/` 是這台電腦的虛擬環境，不會上傳到 GitHub。
+`main` 目前作為課程入口，日後放置總成果。其他章節會依進度加入。
