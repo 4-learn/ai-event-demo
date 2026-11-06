@@ -1,6 +1,7 @@
 .env/
 config.env
 07_logging/events.csv
+09_rag/evaluation/generation_results.json
 __pycache__/
 *.pyc
 04_yolo/models/

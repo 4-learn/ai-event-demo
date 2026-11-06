@@ -1,0 +1,10 @@
+[
+  {"id":"a01","question":"地上堆的是紙箱，程式沒有叫，可以當作通道符合辦法嗎？","required":["rule-02"],"kind":"新增：禁止事項與功能限制"},
+  {"id":"a02","question":"一秒取一張圖，連續三張都有椅子，就已經等滿三秒嗎？","required":["rule-03"],"kind":"新增：取樣與持續時間"},
+  {"id":"a03","question":"工作椅從影片第 2 秒擋到第 7 秒，CSV 應記五秒還是告警後的兩秒？","required":["rule-06"],"kind":"新增：事件時間"},
+  {"id":"a04","question":"週報說 aisle_01 本週十次占用，是否就能判定倉管偷懶？","required":["rule-07"],"kind":"新增：責任推論"},
+  {"id":"a05","question":"規範提到的 3 秒，是由哪一條台灣法律規定的？","required":["rule-03"],"kind":"新增：虛構法律前提"},
+  {"id":"a06","question":"教學用的 sample_events.csv 可以拿來證明工廠真實違規嗎？","required":["rule-07"],"kind":"新增：模擬資料界線"},
+  {"id":"a07","question":"收到告警後一分鐘一定要移除障礙物，這份文件有要求嗎？","required":["rule-08"],"kind":"新增：未規定期限"},
+  {"id":"a08","question":"椅子仍在路中間，但 Python 程式被停止了，能把它自動當成已處理嗎？","required":["rule-06"],"kind":"新增：程式中斷"}
+]

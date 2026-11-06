@@ -1,0 +1,2 @@
+# 測試中的語意檢索。沿用既有 CPU PyTorch，避免重新安裝 GPU 版本。
+sentence-transformers>=5,<7

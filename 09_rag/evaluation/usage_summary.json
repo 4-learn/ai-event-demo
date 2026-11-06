@@ -1,0 +1,16 @@
+{
+  "calls": 49,
+  "input_tokens": 42198,
+  "output_tokens": 5327,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 0,
+  "reasoning_tokens": 0,
+  "estimated_usd": 0.0068833,
+  "model": "gpt-6-luna",
+  "rates_per_million": {
+    "input": 0.1,
+    "output": 0.5,
+    "cached_input": 0.01
+  },
+  "pricing_source": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+}
