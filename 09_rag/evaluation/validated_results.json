@@ -76,7 +76,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.78,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q02",
@@ -148,7 +148,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.45,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q03",
@@ -220,7 +220,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.39,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q04",
@@ -293,7 +293,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.01,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q05",
@@ -369,7 +369,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.97,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q06",
@@ -441,7 +441,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 1.69,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q07",
@@ -517,7 +517,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.82,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q08",
@@ -589,7 +589,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.96,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q09",
@@ -666,7 +666,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.46,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q10",
@@ -738,7 +738,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.02,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q11",
@@ -810,7 +810,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 3.29,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q12",
@@ -882,7 +882,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 3.58,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q13",
@@ -954,7 +954,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 1.64,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q14",
@@ -1026,7 +1026,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 1.94,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q15",
@@ -1102,7 +1102,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.65,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q16",
@@ -1240,7 +1240,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 1.86,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q18",
@@ -1312,7 +1312,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.92,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q19",
@@ -1384,7 +1384,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.56,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "q20",
@@ -1456,7 +1456,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.09,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "a01",
@@ -1528,7 +1528,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.75,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "a02",
@@ -1600,7 +1600,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 1.57,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "a03",
@@ -1676,7 +1676,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.82,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "a04",
@@ -1752,7 +1752,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.66,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "a05",
@@ -1824,7 +1824,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.02,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "a06",
@@ -1896,7 +1896,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.06,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "a07",
@@ -1972,7 +1972,7 @@
       "citation_check": "pass",
       "semantic_review": "pass",
       "elapsed_seconds": 2.46,
-      "review_note": "人工核對：答案或資訊不足的說明，與本次提供的條文一致。"
+      "review_note": "逐題核對：答案或資訊不足的說明，與本次提供的條文一致。"
     },
     {
       "id": "a08",

@@ -48,7 +48,7 @@ for case in cases:
             row["citation_check"] = "pass"
         except ValueError as error:
             row["citation_check"] = str(error)
-        # 此處不以關鍵字宣稱語意正確；答案逐題人工核對。
+        # 此處不以關鍵字宣稱語意正確；答案逐題逐題核對。
         row["semantic_review"] = "pending"
     except Exception as error:
         row["error"] = str(error)
