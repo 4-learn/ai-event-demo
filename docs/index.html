@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="document-version" content="1.0">
+  <title>通道管理辦法｜AI 事件管理教學</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #101722; color: #f3f6fa; }
+    body { max-width: 820px; margin: auto; padding: 48px 24px; line-height: 1.9; }
+    a { color: #45d6bc; } h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.4; }
+    h2 { font-size: 22px; } .label, .version { color: #bac5d5; }
+    .notice { border-left: 3px solid #45d6bc; padding: 14px 20px; background: #1c2430; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 28px 0; }
+    article { border-top: 1px solid #344052; padding: 22px 0; scroll-margin-top: 20px; }
+    article h2 a { text-decoration: none; } footer { border-top: 1px solid #344052; padding-top: 24px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="label">AI 事件管理系統 · 教學知識來源</div>
+    <h1>通道管理辦法</h1>
+    <div class="version">版本 1.0 · 更新日期 2026-11-06</div>
+    <p class="notice">本文件為虛構的教學模擬辦法，供爬蟲、RAG 與 Agent 練習使用，並非正式法規或任何工廠的作業指示。</p>
+    <nav aria-label="條文目錄">
+      <a href="#rule-01">適用範圍</a><a href="#rule-02">禁止占用</a>
+      <a href="#rule-03">告警條件</a><a href="#rule-04">接獲告警</a>
+      <a href="#rule-05">解除確認</a><a href="#rule-06">事件紀錄</a>
+      <a href="#rule-07">反覆占用</a><a href="#rule-08">文件未規定</a>
+    </nav>
+  </header>
+  <main>
+    <article class="rule" id="rule-01">
+      <h2><a href="#rule-01">第 1 條｜適用範圍</a></h2>
+      <p>本教學辦法適用於示範區域 aisle_01 與 aisle_02 的標示通道。影像中的 ROI 用來指定需要監測的通道範圍；ROI 外的工作區不列入本示範的通道占用判定。</p>
+    </article>
+    <article class="rule" id="rule-02">
+      <h2><a href="#rule-02">第 2 條｜保持通道暢通</a></h2>
+      <p>標示通道不得暫放工作椅、紙箱、推車或其他妨礙通行的物品。短暫放置也不代表允許占用。本次 YOLO 示範僅偵測工作椅，不能據此宣稱系統已能偵測紙箱、推車或所有障礙物。</p>
+    </article>
+    <article class="rule" id="rule-03">
+      <h2><a href="#rule-03">第 3 條｜示範告警條件</a></h2>
+      <p>本示範每秒取樣一次。工作椅辨識框的底部中心點位於 ROI 內或邊界上，且連續占用滿 3 秒時，FSM 進入占用中並發送一次 LINE 告警。未滿 3 秒就淨空時，重設計時。同一事件持續占用期間不重複告警。3 秒是教學設定，並非法定標準，也不是三次取樣。</p>
+    </article>
+    <article class="rule" id="rule-04">
+      <h2><a href="#rule-04">第 4 條｜接獲告警後的處理</a></h2>
+      <p>主管接獲 LINE 占用告警後，應先確認通知所指的區域與現場狀況，再安排現場人員在安全可行的條件下移除物品，恢復通行。AI 告警是需要查核的線索，不能取代主管的現場確認與處理判斷。</p>
+    </article>
+    <article class="rule" id="rule-05">
+      <h2><a href="#rule-05">第 5 條｜淨空與解除確認</a></h2>
+      <p>本示範在取樣畫面中未偵測到工作椅，或所有工作椅的底部中心點都位於 ROI 外時，即判定淨空並解除占用。主管仍應確認通道實際恢復暢通；模型可能漏判。影片播放結束只代表停止讀取畫面，不代表通道已淨空，也不應自動視為事件解除。</p>
+    </article>
+    <article class="rule" id="rule-06">
+      <h2><a href="#rule-06">第 6 條｜事件紀錄與時間</a></h2>
+      <p>已達告警門檻的事件在解除時，將事件 ID、區域、占用開始時間、結束時間與持續秒數寫入 events.csv。開始時間採首次偵測到連續占用的時間，不是滿 3 秒的告警時間。教學影片用 demo 起始日期時間加上影片時間換算，採台北時區。尚未解除或程式中斷時，本版尚未保存該事件。</p>
+    </article>
+    <article class="rule" id="rule-07">
+      <h2><a href="#rule-07">第 7 條｜反覆占用與每週回顧</a></h2>
+      <p>主管每週檢視各區域的占用次數、總占用時間與事件發生時段，對反覆占用的區域安排現場查核，檢討物品暫存位置與作業動線。次數與秒數由 Python 統計，Agent 可依統計與本辦法整理建議，但不得只憑事件紀錄推斷根本原因或責任歸屬。sample_events.csv 是虛構模擬資料，不是實際工廠紀錄。</p>
+    </article>
+    <article class="rule" id="rule-08">
+      <h2><a href="#rule-08">第 8 條｜文件未規定事項</a></h2>
+      <p>本教學文件未規定通道法定寬度、罰款金額、法定改善期限、告警後幾分鐘內必須到場、個人懲處與事故責任。需要這些資訊時，應另查適用的正式文件並交由負責人員確認，不得將本文件或 AI 推測當作法規依據。</p>
+    </article>
+  </main>
+  <footer><a href="https://github.com/4-learn/ai-event-demo">回到課程 repository</a> · 每條標題皆可連結，便於核對 AI 回答的來源。</footer>
+</body>
+</html>
