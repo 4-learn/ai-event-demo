@@ -1,3 +1,5 @@
 .env/
 __pycache__/
 *.pyc
+04_yolo/models/
+runs/
