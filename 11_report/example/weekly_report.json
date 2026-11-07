@@ -1,0 +1,246 @@
+{
+  "summary": "七天模擬紀錄中，aisle_01 的占用較頻繁；aisle_02 次數較少，但有較長的單次占用。優先改善 aisle_01，並將 aisle_02 納入現場查核；紀錄本身不能判定根本原因或責任。",
+  "recommendations": [
+    {
+      "zone": "aisle_01",
+      "action": "安排現場查核，檢討物品暫存位置與作業動線；依查核結果確認改善方向。",
+      "rule_id": "rule-07",
+      "quote": "主管每週檢視各區域的占用次數、總占用時間與事件發生時段，對反覆占用的區域安排現場查核，檢討物品暫存位置與作業動線。"
+    },
+    {
+      "zone": "aisle_02",
+      "action": "查核標示通道是否暫放工作椅、紙箱、推車或其他妨礙通行的物品，並確認通道保持暢通。",
+      "rule_id": "rule-02",
+      "quote": "標示通道不得暫放工作椅、紙箱、推車或其他妨礙通行的物品。短暫放置也不代表允許占用。"
+    }
+  ],
+  "statistics": {
+    "dataset": "sample_events.csv",
+    "is_simulated": true,
+    "period_start": "2026-10-30",
+    "period_end": "2026-11-05",
+    "timezone": "Asia/Taipei",
+    "event_count": 30,
+    "total_seconds": 5070.0,
+    "zones": {
+      "aisle_01": {
+        "event_count": 21,
+        "total_seconds": 3150.0,
+        "longest_seconds": 240.0
+      },
+      "aisle_02": {
+        "event_count": 9,
+        "total_seconds": 1920.0,
+        "longest_seconds": 900.0
+      }
+    },
+    "events_by_start_hour": {
+      "09:00": 14,
+      "11:00": 7,
+      "14:00": 7,
+      "16:00": 2
+    }
+  },
+  "evidence": [
+    {
+      "id": "rule-06",
+      "title": "通道管理辦法",
+      "version": "1.0",
+      "section": "第 6 條｜事件紀錄與時間",
+      "text": "已達告警門檻的事件在解除時，將事件 ID、區域、占用開始時間、結束時間與持續秒數寫入 events.csv。開始時間採首次偵測到連續占用的時間，不是滿 3 秒的告警時間。教學影片用 demo 起始日期時間加上影片時間換算，採台北時區。尚未解除或程式中斷時，本版尚未保存該事件。",
+      "source": "https://4-learn.github.io/ai-event-demo/#rule-06",
+      "fetched_at": "2026-11-07T04:50:22+00:00",
+      "score": 0.8846840858459473
+    },
+    {
+      "id": "rule-07",
+      "title": "通道管理辦法",
+      "version": "1.0",
+      "section": "第 7 條｜反覆占用與每週回顧",
+      "text": "主管每週檢視各區域的占用次數、總占用時間與事件發生時段，對反覆占用的區域安排現場查核，檢討物品暫存位置與作業動線。次數與秒數由 Python 統計，Agent 可依統計與本辦法整理建議，但不得只憑事件紀錄推斷根本原因或責任歸屬。sample_events.csv 是虛構模擬資料，不是實際工廠紀錄。",
+      "source": "https://4-learn.github.io/ai-event-demo/#rule-07",
+      "fetched_at": "2026-11-07T04:50:22+00:00",
+      "score": 0.9113398790359497
+    },
+    {
+      "id": "rule-02",
+      "title": "通道管理辦法",
+      "version": "1.0",
+      "section": "第 2 條｜保持通道暢通",
+      "text": "標示通道不得暫放工作椅、紙箱、推車或其他妨礙通行的物品。短暫放置也不代表允許占用。本次 YOLO 示範僅偵測工作椅，不能據此宣稱系統已能偵測紙箱、推車或所有障礙物。",
+      "source": "https://4-learn.github.io/ai-event-demo/#rule-02",
+      "fetched_at": "2026-11-07T04:50:22+00:00",
+      "score": 0.8707901239395142
+    },
+    {
+      "id": "rule-04",
+      "title": "通道管理辦法",
+      "version": "1.0",
+      "section": "第 4 條｜接獲告警後的處理",
+      "text": "主管接獲 LINE 占用告警後，應先確認通知所指的區域與現場狀況，再安排現場人員在安全可行的條件下移除物品，恢復通行。AI 告警是需要查核的線索，不能取代主管的現場確認與處理判斷。",
+      "source": "https://4-learn.github.io/ai-event-demo/#rule-04",
+      "fetched_at": "2026-11-07T04:50:22+00:00",
+      "score": 0.8777567744255066
+    }
+  ],
+  "trace": [
+    {
+      "tool": "summarize_events",
+      "arguments": {},
+      "result": {
+        "dataset": "sample_events.csv",
+        "is_simulated": true,
+        "period_start": "2026-10-30",
+        "period_end": "2026-11-05",
+        "timezone": "Asia/Taipei",
+        "event_count": 30,
+        "total_seconds": 5070.0,
+        "zones": {
+          "aisle_01": {
+            "event_count": 21,
+            "total_seconds": 3150.0,
+            "longest_seconds": 240.0
+          },
+          "aisle_02": {
+            "event_count": 9,
+            "total_seconds": 1920.0,
+            "longest_seconds": 900.0
+          }
+        },
+        "events_by_start_hour": {
+          "09:00": 14,
+          "11:00": 7,
+          "14:00": 7,
+          "16:00": 2
+        }
+      }
+    },
+    {
+      "tool": "search_regulations",
+      "arguments": {
+        "query": "通道占用事件頻繁或單次持續較久時，如何查核、記錄與改善通道保持暢通；請提供可支持具體建議的條文原文與 rule_id。"
+      },
+      "result": [
+        {
+          "id": "rule-06",
+          "title": "通道管理辦法",
+          "version": "1.0",
+          "section": "第 6 條｜事件紀錄與時間",
+          "text": "已達告警門檻的事件在解除時，將事件 ID、區域、占用開始時間、結束時間與持續秒數寫入 events.csv。開始時間採首次偵測到連續占用的時間，不是滿 3 秒的告警時間。教學影片用 demo 起始日期時間加上影片時間換算，採台北時區。尚未解除或程式中斷時，本版尚未保存該事件。",
+          "source": "https://4-learn.github.io/ai-event-demo/#rule-06",
+          "fetched_at": "2026-11-07T04:50:22+00:00",
+          "score": 0.8846840858459473
+        },
+        {
+          "id": "rule-07",
+          "title": "通道管理辦法",
+          "version": "1.0",
+          "section": "第 7 條｜反覆占用與每週回顧",
+          "text": "主管每週檢視各區域的占用次數、總占用時間與事件發生時段，對反覆占用的區域安排現場查核，檢討物品暫存位置與作業動線。次數與秒數由 Python 統計，Agent 可依統計與本辦法整理建議，但不得只憑事件紀錄推斷根本原因或責任歸屬。sample_events.csv 是虛構模擬資料，不是實際工廠紀錄。",
+          "source": "https://4-learn.github.io/ai-event-demo/#rule-07",
+          "fetched_at": "2026-11-07T04:50:22+00:00",
+          "score": 0.8831949234008789
+        },
+        {
+          "id": "rule-02",
+          "title": "通道管理辦法",
+          "version": "1.0",
+          "section": "第 2 條｜保持通道暢通",
+          "text": "標示通道不得暫放工作椅、紙箱、推車或其他妨礙通行的物品。短暫放置也不代表允許占用。本次 YOLO 示範僅偵測工作椅，不能據此宣稱系統已能偵測紙箱、推車或所有障礙物。",
+          "source": "https://4-learn.github.io/ai-event-demo/#rule-02",
+          "fetched_at": "2026-11-07T04:50:22+00:00",
+          "score": 0.8826733827590942
+        }
+      ]
+    },
+    {
+      "tool": "search_regulations",
+      "arguments": {
+        "query": "現場查核反覆占用區域時，如何檢討物品暫存位置與作業動線；以及通道不得暫放物品的規範原文。"
+      },
+      "result": [
+        {
+          "id": "rule-07",
+          "title": "通道管理辦法",
+          "version": "1.0",
+          "section": "第 7 條｜反覆占用與每週回顧",
+          "text": "主管每週檢視各區域的占用次數、總占用時間與事件發生時段，對反覆占用的區域安排現場查核，檢討物品暫存位置與作業動線。次數與秒數由 Python 統計，Agent 可依統計與本辦法整理建議，但不得只憑事件紀錄推斷根本原因或責任歸屬。sample_events.csv 是虛構模擬資料，不是實際工廠紀錄。",
+          "source": "https://4-learn.github.io/ai-event-demo/#rule-07",
+          "fetched_at": "2026-11-07T04:50:22+00:00",
+          "score": 0.9113398790359497
+        },
+        {
+          "id": "rule-04",
+          "title": "通道管理辦法",
+          "version": "1.0",
+          "section": "第 4 條｜接獲告警後的處理",
+          "text": "主管接獲 LINE 占用告警後，應先確認通知所指的區域與現場狀況，再安排現場人員在安全可行的條件下移除物品，恢復通行。AI 告警是需要查核的線索，不能取代主管的現場確認與處理判斷。",
+          "source": "https://4-learn.github.io/ai-event-demo/#rule-04",
+          "fetched_at": "2026-11-07T04:50:22+00:00",
+          "score": 0.8777567744255066
+        },
+        {
+          "id": "rule-02",
+          "title": "通道管理辦法",
+          "version": "1.0",
+          "section": "第 2 條｜保持通道暢通",
+          "text": "標示通道不得暫放工作椅、紙箱、推車或其他妨礙通行的物品。短暫放置也不代表允許占用。本次 YOLO 示範僅偵測工作椅，不能據此宣稱系統已能偵測紙箱、推車或所有障礙物。",
+          "source": "https://4-learn.github.io/ai-event-demo/#rule-02",
+          "fetched_at": "2026-11-07T04:50:22+00:00",
+          "score": 0.8707901239395142
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 618,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 16,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 634
+    },
+    {
+      "input_tokens": 819,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 66,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 885
+    },
+    {
+      "input_tokens": 1519,
+      "input_tokens_details": {
+        "cache_write_tokens": 1516,
+        "cached_tokens": 0
+      },
+      "output_tokens": 62,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1581
+    },
+    {
+      "input_tokens": 2193,
+      "input_tokens_details": {
+        "cache_write_tokens": 674,
+        "cached_tokens": 1516
+      },
+      "output_tokens": 295,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2488
+    }
+  ],
+  "question": "請回顧七天模擬事件，指出優先改善的區域，並查規範提出兩項建議。"
+}
