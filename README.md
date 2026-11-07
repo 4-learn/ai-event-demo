@@ -14,6 +14,9 @@
 | [06_line](https://github.com/4-learn/ai-event-demo/tree/06_line) | 事件成立後推播 LINE。 |
 | [07_logging](https://github.com/4-learn/ai-event-demo/tree/07_logging) | 解除後寫入 CSV，附七天模擬紀錄。 |
 | [08_crawler](https://github.com/4-learn/ai-event-demo/tree/08_crawler) | 擷取教學規範，保留條文與來源。 |
+| [09_rag](https://github.com/4-learn/ai-event-demo/tree/09_rag) | 語意檢索、依證據回答與引用檢查。 |
+| [10_agent](https://github.com/4-learn/ai-event-demo/tree/10_agent) | 讓模型選擇事件統計與規範工具。 |
+| [11_report](https://github.com/4-learn/ai-event-demo/tree/11_report) | 用 Python 輸出一頁 PDF，附可直接查看的範例。 |
 
 ```bash
 git clone https://github.com/4-learn/ai-event-demo.git
