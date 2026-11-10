@@ -66,11 +66,13 @@ dtype: int64
 
 ### 想重新練習
 
-`clean_events.py` 會直接改寫 `sample_events.csv`。要回到 34 筆、含缺值的原始版本：
+`clean_events.py` 會直接改寫 `sample_events.csv`。要回到 34 筆、含缺值的原始版本，用備份檔覆蓋回去：
 
 ```sh
-git checkout -- 07_logging/sample_events.csv
+cp 07_logging/sample_events.csv-old 07_logging/sample_events.csv
 ```
+
+`sample_events.csv-old` 是含缺值的備份，不要拿它來清理。也可以用 git 還原：`git checkout -- 07_logging/sample_events.csv`。
 
 ## 資料檔
 
@@ -78,6 +80,7 @@ git checkout -- 07_logging/sample_events.csv
 | --- | --- |
 | `events.csv` | 執行 `main.py` 產生，已忽略、不上傳 GitHub |
 | `sample_events.csv` | 模擬資料：2026-10-30 至 2026-11-05、兩區域。版本控制中是 34 筆（含 4 筆缺值）；執行 `clean_events.py` 後剩 30 筆，供 10、11 統計 |
+| `sample_events.csv-old` | 含缺值的 34 筆備份，重新練習時複製回 `sample_events.csv` |
 
 欄位一致：event_id、zone、started_at、ended_at、duration_seconds。不要把模擬資料當作實際工廠紀錄。
 
