@@ -1,7 +1,6 @@
 .env/
 config.env
 07_logging/events.csv
-07_logging/clean_events.csv
 __pycache__/
 *.pyc
 04_yolo/models/
