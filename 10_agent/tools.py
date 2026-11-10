@@ -18,6 +18,8 @@ def summarize_events():
         events = list(csv.DictReader(file))
     if not events:
         raise ValueError("事件資料為空")
+    if any(not value for event in events for value in event.values()):
+        raise ValueError("sample_events.csv 還有缺值，請先執行 python 07_logging/clean_events.py")
 
     zones = {}
     hours = Counter()
