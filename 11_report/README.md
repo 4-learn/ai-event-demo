@@ -19,4 +19,4 @@ python 11_report/main.py
 
 PDF 使用可嵌入的中文字型；4-learn 已有文泉驛正黑，其他 Linux 可安裝 fonts-wqy-zenhei，或以 REPORT_FONT 指定 TrueType 中文字型。
 
-資料固定為七天、兩區域的虛構 sample_events.csv，清楚標示為教學模擬，不能當成實際工廠改善或歸責依據。若文字太長，一頁模板會提示錯誤，不縮到難以閱讀。輸出目錄已忽略，不隨 Git 上傳。
+資料固定為七天、兩區域的虛構 sample_events.csv（先執行 `python 07_logging/clean_events.py` 清掉缺值；還沒清理時，程式會提示這一步。），清楚標示為教學模擬，不能當成實際工廠改善或歸責依據。若文字太長，一頁模板會提示錯誤，不縮到難以閱讀。輸出目錄已忽略，不隨 Git 上傳。
