@@ -7,4 +7,3 @@ __pycache__/
 *.pyc
 04_yolo/models/
 runs/
-07_logging/clean_events.csv
