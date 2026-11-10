@@ -4,7 +4,7 @@
 
 - `main.py`：沿用 06，在已告警事件解除時呼叫 `save_event()`。
 - `event_logger.py`：產生事件 ID、計算秒數，追加寫入 CSV；首次寫入才建立表頭。
-- `clean_events.py`：用 pandas 讀取有缺值的紀錄，刪掉不完整的列，存成新的 CSV。
+- `clean_events.py`：用 pandas 讀取 `sample_events.csv`，刪掉有缺值的列，存回同一個檔案。
 - `detector.py`、`notifier.py`：沿用 06。
 
 在 repo 根目錄執行（沿用 config.env 與既有套件）：
@@ -20,7 +20,7 @@ cat 07_logging/events.csv
 
 ## 用 pandas 清理缺值
 
-實際紀錄常有不完整的列，例如程式中斷、事件沒有解除，就沒有結束時間與秒數。`raw_events.csv` 在 30 筆模擬資料中加入 4 筆不完整的列：
+實際紀錄常有不完整的列，例如程式中斷、事件沒有解除，就沒有結束時間與秒數。`sample_events.csv` 共 34 筆，其中 4 筆不完整：
 
 | event_id | 缺少的欄位 | 可能的原因（教學設定） |
 | --- | --- | --- |
@@ -51,25 +51,33 @@ dtype: int64
 32  sample_033  aisle_02               NaN
 33  sample_034  aisle_01               NaN
 刪掉 4 筆，剩下 30 筆
-已存成 clean_events.csv
+已存回 sample_events.csv
 ```
 
 1. `pd.read_csv()`：讀進 DataFrame，空白的格子會變成 `NaN`。
 2. `df.isna().sum()`：每一欄有幾個缺值。
 3. `df.dropna()`：只要有一欄是缺值，就刪掉整列。
 4. `astype({"duration_seconds": int})`：有缺值時 pandas 會把整數存成小數（`120` 變 `120.0`），刪完後轉回整數。
-5. `to_csv(..., index=False)`：存回 CSV，不寫入左邊的 index。
+5. `to_csv(..., index=False)`：存回同一個 CSV，不寫入左邊的 index。
 
-`clean_events.csv` 的內容會和 `sample_events.csv` 完全相同，可用來對答案。刪掉的 4 筆不代表現場沒發生事件，只是紀錄不完整、這次不列入統計。
+清理後剩下 30 筆完整紀錄，**10、11 的統計就是讀這份清好的資料**，所以要先跑完這一步。再執行一次會顯示「刪掉 0 筆」，不會重複刪資料。
+
+刪掉的 4 筆不代表現場沒發生事件，只是紀錄不完整、這次不列入統計。
+
+### 想重新練習
+
+`clean_events.py` 會直接改寫 `sample_events.csv`。要回到 34 筆、含缺值的原始版本：
+
+```sh
+git checkout -- 07_logging/sample_events.csv
+```
 
 ## 資料檔
 
 | 檔案 | 用途 |
 | --- | --- |
 | `events.csv` | 執行 `main.py` 產生，已忽略、不上傳 GitHub |
-| `sample_events.csv` | 明確為模擬資料：2026-10-30 至 2026-11-05、兩區域、30 筆，供後續統計與 Agent 使用 |
-| `raw_events.csv` | `sample_events.csv` 加上 4 筆不完整紀錄，給 `clean_events.py` 練習 |
-| `clean_events.csv` | 執行 `clean_events.py` 產生，已忽略、不上傳 GitHub |
+| `sample_events.csv` | 模擬資料：2026-10-30 至 2026-11-05、兩區域。版本控制中是 34 筆（含 4 筆缺值）；執行 `clean_events.py` 後剩 30 筆，供 10、11 統計 |
 
 欄位一致：event_id、zone、started_at、ended_at、duration_seconds。不要把模擬資料當作實際工廠紀錄。
 
